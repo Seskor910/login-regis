@@ -18,19 +18,19 @@ class User(db.Model):
 
 @app.route('/')
 def index():
-    return 'Index'
+    return 'Welcome to the Index page'
 
 @app.route('/profile')
 def profile():
-    return 'Profile'
+    return 'This is the Profile page'
 
 @app.route('/login')
 def login():
-    return 'Login'
+    return 'Please login to access your account'
 
 @app.route('/signup', methods=['GET'])
 def signup():
-    return 'Signup'
+    return 'Sign up for a new account'
 
 @app.route('/signup', methods=['POST'])
 def signup_post():
@@ -55,7 +55,7 @@ def signup_post():
 
 @app.route('/logout')
 def logout():
-    return 'Logout'
+    return 'You have been logged out'
 
 if __name__ == '__main__':
     app.cli.add_command(db.create_all)
