@@ -62,7 +62,7 @@ server {
   server_name YOUR_SERVERS_IP_ADDRESS;
 
   location / {
-    proxy_pass "http://127.0.0.1:PORT";
+    proxy_pass "http://127.0.0.1:8000";
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection 'upgrade';
@@ -70,7 +70,7 @@ server {
   }
 }
 ```
-change the server_name YOUR_SERVERS_IP_ADDRESS with your external IP from intances. Also change the PORT to match the port when you deploy the app.
+change the server_name YOUR_SERVERS_IP_ADDRESS with your external IP from intances
 4. Save the file and exit the editor.
 
 ## Restart Nginx
@@ -100,3 +100,9 @@ sudo service nginx restart
    ```shell
    python3 main.py
    ```
+
+## Accessing the API
+For the endpoint:
+ - POST: your_ip/upload
+ - POST: your_ip/signup
+ - POST: your_ip/login
