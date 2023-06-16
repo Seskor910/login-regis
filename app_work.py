@@ -68,7 +68,7 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(id):
-    return session.query(User).get(id=id)
+    return session.query(User).get(id)
 
 @app.route('/signup')
 def signup():
