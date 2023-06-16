@@ -71,6 +71,7 @@ server {
 }
 ```
 change the server_name YOUR_SERVERS_IP_ADDRESS with your external IP from intances
+
 4. Save the file and exit the editor.
 
 ## Restart Nginx
